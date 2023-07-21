@@ -25,6 +25,15 @@
                     </div>
                 </div>
 
+                <div class="thumbs">
+                    <div class="prev" @click="prevImage"></div>
+                    <div class="next" @click="nextImage"></div>
+                    <div v-for="(image, index) in images" :key="index" class="thumb" @click="showImage(index)"
+                        :class="{ active: currentIndex === index }">
+                        <img :src="image.src" :alt="image.alt" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

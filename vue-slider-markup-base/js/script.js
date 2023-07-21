@@ -43,5 +43,16 @@ Vue.createApp({
         ],
       };
     },
-   
+    methods: {
+      showImage(index) {
+        this.currentIndex = index;
+      },
+      prevImage() {
+        this.currentIndex =
+          (this.currentIndex - 1 + this.images.length) % this.images.length;
+      },
+      nextImage() {
+        this.currentIndex = (this.currentIndex + 1) % this.images.length;
+      },
+    },
   }).mount("#app");
