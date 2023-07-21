@@ -17,8 +17,14 @@
     <div id="app">
         <div class="container">
             <div class="slider" tabindex="0">
-                
-            </div>
+                <div class="item">
+                    <img :src="images[currentIndex].src" :alt="images[currentIndex].alt" />
+                    <div class="text">
+                        <h3>{{ images[currentIndex].title }}</h3>
+                        <p>{{ images[currentIndex].description }}</p>
+                    </div>
+                </div>
+
         </div>
     </div>
 
